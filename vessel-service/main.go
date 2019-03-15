@@ -50,6 +50,7 @@ func (s *service) FindAvailable(ctx context.Context, spec *pb.Specification, res
 }
 
 func main() {
+	//定义货船
 	vessels := []*pb.Vessel{
 		{Id: "vessel001", Name: "Boaty McBoatface", MaxWeight: 200000, Capacity: 500},
 	}
