@@ -5,6 +5,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/micro/go-micro"
+	"github.com/micro/go-micro/server"
 	"io/ioutil"
 	"log"
 	"os"
@@ -35,7 +36,7 @@ func main() {
 		micro.Version("latest"),
 	)
 	//解析命令行参数
-	m_server.Init()
+	server.Init()
 	//创建一个微服务客户端
 
 	client := pb.NewShippingService("go.micro.srv.consignment", m_server.Client())
